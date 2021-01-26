@@ -1,4 +1,5 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
+import * as path from 'path';
 
 export default (appInfo: EggAppInfo) => {
   const config = {} as PowerPartial<EggAppConfig>;
@@ -10,6 +11,23 @@ export default (appInfo: EggAppInfo) => {
   // add your egg config in here
   config.middleware = [];
 
+  const mongoose = {
+    client: {
+      url: 'mongodb://localhost/fastweb',
+      options: {
+        useNewUrlParser: true,
+      }
+    }
+  };
+
+  const view = {
+    root: [
+      path.join(appInfo.baseDir, 'app/view')
+    ].join(','),
+    defaultViewEngine: 'nunjucks',
+    defaultExtension: '.nj'
+  };
+
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
@@ -19,5 +37,7 @@ export default (appInfo: EggAppInfo) => {
   return {
     ...config,
     ...bizConfig,
+    mongoose,
+    view,
   };
 };
