@@ -13,5 +13,5 @@ export default function User(app: Application) {
         createTime: { type: String, default: Date.now() },
         updateTime: { type: String, default: Date.now() }
     });
-    return mongoose.model('Order', userSchema, 'user');
+    return mongoose.model('User', userSchema, 'user');
 }

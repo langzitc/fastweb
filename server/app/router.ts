@@ -8,4 +8,6 @@ export default (app: Application) => {
   router.get('/talk', controller.page.talk);
   router.get('/help', controller.page.help);
   router.get('/case', controller.page.case);
+
+  router.resources('user', '/api/user', app.controller.user);
 };

@@ -61,3 +61,99 @@
         }
     }
 }
+.layout-workbench{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-left: 280px;
+    box-sizing: border-box;
+    .lw-left{
+        width: 80px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: @fw-bg-light-color;
+        padding-top: 80px;
+        box-sizing: border-box;
+        box-shadow: rgba(0, 0, 0, 0.05) 9px 0px 28px 0px;
+        .logo{
+            height: 79px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            border-bottom: 1px solid #f7f7f7;
+        }
+        .lw-menu{
+            .lw-menu-item{
+                padding: 15px;
+                box-sizing: border-box;
+                cursor: pointer;
+                border-bottom: 1px solid #f7f7f7;
+                &.primary{
+                    .lmi-icon i{
+                        color: @fw-active-color;
+                    }
+                }
+                .lmi-icon{
+                    text-align: center;
+                    i{
+                        font-size: 24px;
+                    }
+                }
+                .lmi-text{
+                    text-align: center;
+                }
+                &.active{
+                    .lmi-text, .lmi-icon i{
+                        color: @primary-color;
+                    }
+                }
+            }
+        }
+    }
+    .lw-drawer{
+        width: 200px;
+        height: 100%;
+        position: absolute;
+        left: 80px;
+        top: 0;
+        background-color: @fw-bg-color;
+        box-shadow: rgba(0, 0, 0, 0.05) 9px 0px 28px 0px;
+        .lw-search{
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .lw-cmenu{
+            padding: 15px 0;
+            .lw-cmenu-item{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 5px 15px;
+                box-sizing: border-box;
+                .lci-icon{
+                    i{
+                        font-size: 18px;
+                    }
+                }
+                .lci-text{
+                    margin-left: 5px;
+                }
+                &:hover,&.actived{
+                    background-color: #e8eef5;
+                    color: @primary-color;
+                }
+            }
+        }
+    }
+    .lw-body{
+        width: 100%;
+        height: 100%;
+    }
+}
