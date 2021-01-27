@@ -9,9 +9,10 @@ function App() {
     <RecoilRoot>
       <Router history={history}>
           <Switch>
-              <Route exact path="/" render={ () => (<Redirect to="/page" />) } />
+              <Route exact path="/" render={ () => (<Redirect to="/admin" />) } />
               <Route path="/login" component={LazyLoad(React.lazy(()=>import ('@/pages/login'))) } />
               <Route path="/page" component={LazyLoad(React.lazy(()=>import ('@/pages/page'))) } />
+              <Route path="/admin" component={LazyLoad(React.lazy(()=>import ('@/pages/admin'))) } />
           </Switch>
       </Router>
     </RecoilRoot>

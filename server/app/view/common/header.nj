@@ -1,0 +1,31 @@
+<header class="header">
+    <div class="header-wrap responsive">
+        <div class="logo">
+            <img alt="fastweb" src="/public/static/fast.svg" />
+            <span class="text">FastWeb</span>
+        </div>
+        <div class="header-right">
+            <nav class="menu">
+                <li class="menu-item{% if active === '/' %} actived{% endif %}">
+                    <a href="/" target="_blank">首页</a>
+                </li>
+                <li class="menu-item{% if active === '/product' %} actived{% endif %}">
+                    <a href="/product" target="_blank">产品</a>
+                </li>
+                <li class="menu-item{% if active === '/case' %} actived{% endif %}">
+                    <a href="/case" target="_blank">行业方案</a>
+                </li>   
+                <li class="menu-item{% if active === '/help' %} actived{% endif %}">
+                    <a href="/help" target="_blank">帮助中心</a>
+                </li>    
+                <li class="menu-item{% if active === '/talk' %} actived{% endif %}">
+                    <a href="/talk" target="_blank">社区</a>
+                </li>                                                                        
+            </nav>
+            <div class="btns">
+                <div class="btn primary plain">登录</div>
+                <div class="btn primary">免费试用</div>
+            </div>        
+        </div>
+    </div>
+</header>

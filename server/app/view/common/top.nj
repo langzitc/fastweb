@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="fastweb,Fastweb,一键生成前端代码,前端生成器,网站生成器,前端设计器">
+    <meta name="description" content="fastweb,Fastweb,一键生成前端代码,前端生成器,网站生成器,前端设计器">
+    <meta name="author" content="langzitc,919777596@qq.com">
+    <meta name="copyright" content="langzitc">
+    <meta name="renderer" content="webkit">
+    <meta name="renderer" content="ie-comp">
+    <meta name="renderer" content="ie-stand">     
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" href="/public/static/css/style.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css" rel="stylesheet">
+    <title>{{ pageTitle }}</title>
+</head>
+<body>
