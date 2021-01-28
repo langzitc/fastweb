@@ -6,6 +6,69 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1160150",
+      "name": "h5e",
+      "font_class": "h5e",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "1917140",
+      "name": "网页",
+      "font_class": "html",
+      "unicode": "e805",
+      "unicode_decimal": 59397
+    },
+    {
+      "icon_id": "9843400",
+      "name": "网站0",
+      "font_class": "wangzhan",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "11463943",
+      "name": "微信小程序",
+      "font_class": "weixinxiaochengxu",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "17704755",
+      "name": "支付宝小程序",
+      "font_class": "zhifubaoxiaochengxu",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "554388",
+      "name": "页面",
+      "font_class": "iconset0335",
+      "unicode": "e718",
+      "unicode_decimal": 59160
+    },
+    {
+      "icon_id": "1620902",
+      "name": "页面",
+      "font_class": "yemian",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "10040320",
+      "name": "spa",
+      "font_class": "spa",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "10135256",
+      "name": "mpa",
+      "font_class": "mpa",
+      "unicode": "e8b6",
+      "unicode_decimal": 59574
+    },
+    {
       "icon_id": "15838457",
       "name": "cut",
       "font_class": "cut",

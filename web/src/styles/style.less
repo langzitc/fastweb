@@ -65,8 +65,11 @@
     width: 100%;
     height: 100%;
     position: relative;
-    padding-left: 280px;
+    padding-left: 80px;
     box-sizing: border-box;
+    &.toggle{
+        padding-left: 280px;
+    }
     .lw-left{
         width: 80px;
         height: 100%;
@@ -95,9 +98,15 @@
                 box-sizing: border-box;
                 cursor: pointer;
                 border-bottom: 1px solid #f7f7f7;
+                position: relative;
                 &.primary{
                     .lmi-icon i{
                         color: @fw-active-color;
+                    }
+                }
+                &.active{
+                    .lmi-icon i, .lmi-text{
+                        color: fade(@primary-color, 20%);
                     }
                 }
                 .lmi-icon{
@@ -118,16 +127,28 @@
         }
     }
     .lw-drawer{
-        width: 200px;
+        width: 0;
         height: 100%;
         position: absolute;
         left: 80px;
         top: 0;
-        background-color: @fw-bg-color;
-        box-shadow: rgba(0, 0, 0, 0.05) 9px 0px 28px 0px;
+        transition: width .2s linear;
+        overflow: hidden;
+        .lw-drawer-wrap{
+            width: 200px;
+        }
+        &.show{
+            background-color: @fw-bg-color;
+            box-shadow: rgba(0, 0, 0, 0.05) 9px 0px 28px 0px;
+            width: 200px;
+        }
         .lw-search{
             padding: 15px;
             box-sizing: border-box;
+            input{
+                border-radius: 30px;
+                padding-left: 15px;
+            }
         }
         .lw-cmenu{
             padding: 15px 0;
@@ -137,6 +158,8 @@
                 align-items: center;
                 padding: 5px 15px;
                 box-sizing: border-box;
+                cursor: pointer;
+                transition: all .2s linear;
                 .lci-icon{
                     i{
                         font-size: 18px;
@@ -155,5 +178,80 @@
     .lw-body{
         width: 100%;
         height: 100%;
+        position: relative;
+        padding-top: 40px;
+        box-sizing: border-box;
+        .lwb-tool{
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            background-color: fade(#FFCC99, 20%);
+            left: 0;
+            top: 0;
+        }
+        .lwb-content{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.lmi-popmenu{
+    position: absolute;
+    width: 200px;
+    left: 90px;
+    top: 20px;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    padding: 10px 0;
+    display: none;
+    &.show{
+        display: block;
+    }
+    .lmi-popmenu-item{
+        padding: 5px 15px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color .2s linear;
+        &:hover{
+            background-color: fade(@primary-color, 10%);
+        }
+        .lpi-icon{
+            &.warning i{
+                color: @warning-color;
+            }
+            &.info i{
+                color: @info-color;
+            }   
+            &.error i{
+                color: @error-color;
+            }                        
+        }
+        .lpi-text{
+            margin-left: 10px;
+        }
+    }
+}
+.co-project-list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 30px;
+    box-sizing: border-box;
+    .co-project-item{
+        margin-right: 30px;
+        .co-cpi-icon{
+            i{
+                font-size: 60px;
+                color: #f0a492;
+            }
+        }
+        .co-cpi-text{
+            transform: translateY(-20px);
+        }
     }
 }
