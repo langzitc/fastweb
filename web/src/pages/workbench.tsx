@@ -8,7 +8,7 @@ import { ProjectList } from '@/components/projectList';
 
 const { useState, useEffect, useCallback, useRef } = React;
 
-export default function Workbence(): React.FunctionComponentElement<HTMLDivElement> {
+export default function Workbence(): React.ReactElement {
     const [ showCreateMenu, setShowCreateMenu ] = useState(false);
     const menuRef: any = useRef();
     const [ menus, setMenus ] = useRecoilState(workbenchMenus);

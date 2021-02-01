@@ -3,7 +3,7 @@ import { useRecoilValue } from 'recoil';
 import { designLayoutSelector } from '@/store/selector';
 import classnames from 'classnames';
 import DesignHeader from '@/components/designHeader';
-export default function WebDesign(): React.FunctionComponentElement<HTMLDivElement> {
+export default function WebDesign(): React.ReactElement {
     const layout = useRecoilValue(designLayoutSelector);
     return (
         <div className="design-layout">

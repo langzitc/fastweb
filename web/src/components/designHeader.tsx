@@ -6,7 +6,7 @@ import IconMenu from './iconMenu';
 
 const { useMemo } = React;
 
-export default function DesignHeader(): React.FunctionComponentElement<HTMLDivElement> {
+export default function DesignHeader(): React.ReactElement {
     const [ menus, setMenus ] = useRecoilState(designToolMenus);
     const [ layout, setLayout ] = useRecoilState(designLayout);
     const leftMenus: Array<any> = useMemo(() => {

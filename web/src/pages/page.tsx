@@ -1,5 +1,5 @@
 import * as React from 'react';
-export default function Page(): React.FunctionComponentElement<HTMLDivElement> {
+export default function Page(): React.ReactElement {
     return (
         <div className="layout-page">
             <div className="page-header"></div>

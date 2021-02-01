@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export function ProjectItem(): React.FunctionComponentElement<HTMLDivElement> {
+export function ProjectItem(): React.ReactElement {
     return (
         <div className="co-project-item">
             <div className="co-cpi-icon">
