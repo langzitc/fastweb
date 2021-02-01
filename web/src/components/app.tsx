@@ -13,6 +13,7 @@ function App() {
               <Route path="/login" component={LazyLoad(React.lazy(()=>import ('@/pages/login'))) } />
               <Route path="/page" component={LazyLoad(React.lazy(()=>import ('@/pages/page'))) } />
               <Route path="/workbench" component={LazyLoad(React.lazy(()=>import ('@/pages/workbench'))) } />
+              <Route path="/webdesign" component={LazyLoad(React.lazy(()=>import ('@/pages/webdesign'))) } />
           </Switch>
       </Router>
     </RecoilRoot>

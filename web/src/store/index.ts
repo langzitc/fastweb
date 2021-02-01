@@ -1,5 +1,9 @@
 import { atom } from 'recoil';
-import { WORKBENCH_MENUS } from './constant';
+import {
+    WORKBENCH_MENUS,
+    DESIGN_TOOL_MENUS,
+    DESIGN_LAYOUT,
+} from './constant';
 
 export const showSettingPanel = atom({
     key: 'showSettingPanel',
@@ -119,4 +123,101 @@ export const workbenchMenus = atom({
             key: 'cash'
         }]
     }]
+});
+
+export const designToolMenus = atom({
+    key: DESIGN_TOOL_MENUS,
+    default: {
+        left: [{
+            title: '收起左侧面板',
+            icon: ['icon-toggle-left', 'icon-toggle-right'],
+            iconIndex: 0,
+            disabled: false,
+            action: 'toggleLeft',
+            type: 'button',
+        },{
+            title: '首页',
+            icon: 'icon-home',
+            disabled: false,
+            action: 'home',
+            type: 'button',
+        },{
+            title: '首选项',
+            icon: 'icon-modular',
+            disabled: false,
+            type: 'dropdown',
+            action: 'modular',
+            options: [{
+                title: '退出',
+                action: 'exit',
+                icon: 'icon-close-bold'
+            },{
+                title: '首选项',
+                action: 'preference',
+                icon: 'icon-setting'
+            },{
+                title: '教程',
+                action: 'teach',
+                icon: 'icon-link'
+            },{
+                title: '官网',
+                action: 'site',
+                icon: 'icon-wangzhan'
+            }]
+        }],
+        right: [{
+            title: '下载',
+            icon: 'icon-download',
+            disabled: false,
+            action: 'download',
+            type: 'button',            
+        },{
+            title: '缩小',
+            icon: 'icon-minus1',
+            disabled: false,
+            action: 'minus',
+            type: 'button',
+            color: 'green',          
+        },{
+            title: '100%',
+            value: 100,
+            action: 'no',
+            type: 'text',            
+        },{
+            title: '放大',
+            icon: 'icon-plus',
+            disabled: false,
+            action: 'plus',
+            type: 'button',
+            color: 'yellow',            
+        },{
+            title: '状态',
+            icon: 'icon-zhuangtai',
+            disabled: false,
+            action: 'status',
+            type: 'button',            
+        },{
+            title: '全屏',
+            icon: ['icon-screenfull','icon-tuichuquanping'],
+            iconIndex: 0,
+            disabled: false,
+            action: 'screen',
+            type: 'button',            
+        },{
+            title: '收起右侧面板',
+            icon: ['icon-toggle-right', 'icon-toggle-left'],
+            iconIndex: 0,
+            disabled: false,
+            action: 'toggleRight',
+            type: 'button',            
+        }]
+    }
+});
+
+export const designLayout = atom({
+    key: DESIGN_LAYOUT,
+    default: {
+        toggleLeft: false,
+        toggleRight: false,
+    }
 });

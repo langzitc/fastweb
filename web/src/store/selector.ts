@@ -1,6 +1,6 @@
 import { selector } from 'recoil';
-import { GET_WORKBENCH_DRAWER_MENUS, GET_WORKBENCH_MENUS } from './constant';
-import { workbenchMenus } from '@/store';
+import { GET_WORKBENCH_DRAWER_MENUS, GET_WORKBENCH_MENUS, GET_DESIGN_LAYOUT } from './constant';
+import { workbenchMenus, designLayout } from '@/store';
 
 export const workbenchDrawerMenuSelector = selector({
     key: GET_WORKBENCH_DRAWER_MENUS,
@@ -18,3 +18,11 @@ export const workbenchMenuSelector = selector({
         return menus;
     }
 });
+
+export const designLayoutSelector = selector({
+    key: GET_DESIGN_LAYOUT,
+    get({ get }) {
+        return get(designLayout);
+    }
+});
+
