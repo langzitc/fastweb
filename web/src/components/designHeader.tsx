@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useRecoilState } from 'recoil';
 import { designToolMenus, designLayout } from '@/store';
 import { toggleIcon } from '@/store/action';
+import { fullScreen, exitFullScreen } from '@/core/util';
 import IconMenu from './iconMenu';
 
 const { useMemo } = React;
@@ -30,6 +31,14 @@ export default function DesignHeader(): React.ReactElement {
                     ...layout,
                     toggleRight: !layout.toggleRight,
                 });                
+                break;
+            case 'screen':
+                setMenus(toggleIcon(menus, item.action));
+                if(document.fullscreenElement) {
+                    exitFullScreen();
+                }else{
+                    fullScreen();
+                }
                 break;
         }
     }   

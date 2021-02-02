@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "13604636",
+      "name": "系统设置",
+      "font_class": "xitongshezhi",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "18379506",
+      "name": "用户管理",
+      "font_class": "yonghuguanli",
+      "unicode": "e71c",
+      "unicode_decimal": 59164
+    },
+    {
+      "icon_id": "1263393",
+      "name": "主题",
+      "font_class": "zhuti",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "11121438",
+      "name": "组件",
+      "font_class": "zujian",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "16837983",
+      "name": "树",
+      "font_class": "shu",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
       "icon_id": "2356560",
       "name": "全屏",
       "font_class": "screenfull",

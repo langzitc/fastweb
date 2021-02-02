@@ -3,6 +3,8 @@ import {
     WORKBENCH_MENUS,
     DESIGN_TOOL_MENUS,
     DESIGN_LAYOUT,
+    DESIGN_TABS,
+    DESIGN_PROPERTY_TABS,
 } from './constant';
 
 export const showSettingPanel = atom({
@@ -219,5 +221,42 @@ export const designLayout = atom({
     default: {
         toggleLeft: false,
         toggleRight: false,
+    }
+});
+
+
+export const designTabs = atom({
+    key: DESIGN_TABS,
+    default: {
+        activeKey: 'page',
+        options: [{
+            title: '页面',
+            icon: 'icon-yemian',
+            key: 'page'
+        },{
+            title: '组件',
+            icon: 'icon-zujian',
+            key: 'component'
+        },{
+            title: '渲染树',
+            icon: 'icon-shu',
+            key: 'renderTree'
+        }]
+    }
+});
+
+export const propertyTabs = atom({
+    key: DESIGN_PROPERTY_TABS,
+    default: {
+        activeKey: 'properties',
+        options: [{
+            title: '属性',
+            icon: 'icon-yemian',
+            key: 'properties'
+        },{
+            title: '交互',
+            icon: 'icon-zujian',
+            key: 'interactive'
+        }]
     }
 });

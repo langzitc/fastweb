@@ -5,6 +5,7 @@ import { useRecoilValue, useRecoilState } from 'recoil';
 import { workbenchMenus } from '@/store';
 import { workbenchDrawerMenuSelector } from '@/store/selector';
 import { ProjectList } from '@/components/projectList';
+import '@/styles/design.less';
 
 const { useState, useEffect, useCallback, useRef } = React;
 

@@ -5,12 +5,4 @@ export default class UserController extends Controller {
         const { ctx } = this;
         ctx.body = await ctx.model.User.find();
     }  
-    login() {
-        
-    }
-    show() {}
-    edit() {}
-    create() {}
-    update() {}
-    destroy() {}   
 }
