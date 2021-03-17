@@ -9,23 +9,24 @@ export default (appInfo: EggAppInfo) => {
   config.keys = appInfo.name + '_1611542593852_7709';
 
   // add your egg config in here
-  config.middleware = [];
+  config.middleware = [ 'errorHandler' ];
 
   const mongoose = {
     client: {
-      url: 'mongodb://localhost/fastweb',
+      url: 'mongodb://139.186.134.86:27017/fastweb',
       options: {
         useNewUrlParser: true,
-      }
-    }
+        useUnifiedTopology: true,
+      },
+    },
   };
 
   const view = {
     root: [
-      path.join(appInfo.baseDir, 'app/view')
+      path.join(appInfo.baseDir, 'app/view'),
     ].join(','),
     defaultViewEngine: 'nunjucks',
-    defaultExtension: '.nj'
+    defaultExtension: '.nj',
   };
 
   // add your special config in here
@@ -33,10 +34,18 @@ export default (appInfo: EggAppInfo) => {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
   };
 
+  const passportGithub = {
+    key: '89474265692bc900eedc',
+    secret: '24ee44d8e148cba9905fd7a95d766a35b8a181e9',
+    proxy: true,
+    callbackURL: 'http://localhost:7001/passport/github/callback',
+  };
+
   // the return config will combines to EggAppConfig
   return {
     ...config,
     ...bizConfig,
+    passportGithub,
     mongoose,
     view,
   };

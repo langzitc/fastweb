@@ -20,5 +20,5 @@ export default class PageController extends Controller {
   public async case() {
     const { ctx } = this;
     await ctx.render('case', { active: '/case', pageTitle: '行业方案' });
-  }        
+  }
 }

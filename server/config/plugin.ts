@@ -8,8 +8,20 @@ const plugin: EggPlugin = {
   },
   mongoose: {
     enable: true,
-    package: 'egg-mongoose'
-  }
+    package: 'egg-mongoose',
+  },
+  validate: {
+    enable: true,
+    package: 'egg-validate',
+  },
+  passport: {
+    enable: true,
+    package: 'egg-passport',
+  },
+  passportGithub: {
+    enable: true,
+    package: 'egg-passport-github',
+  },
 };
 
 export default plugin;

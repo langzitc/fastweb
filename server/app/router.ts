@@ -3,6 +3,8 @@ import { Application } from 'egg';
 export default (app: Application) => {
   const { controller, router } = app;
 
+  app.passport.mount('github');
+
   router.get('/', controller.page.index);
   router.get('/product', controller.page.product);
   router.get('/talk', controller.page.talk);
@@ -11,7 +13,7 @@ export default (app: Application) => {
 
   router.resources('user', '/api/user', app.controller.user);
 
-  //admin
+  // admin
   router.post('/api/admin/login', controller.admin.login);
   router.post('/api/admin/loginout', controller.admin.loginout);
 
@@ -24,7 +26,7 @@ export default (app: Application) => {
   router.get('/api/admin/user/:id', controller.admin.userinfo);
   router.get('/api/admin/userlist', controller.admin.userlist);
 
-  router.get('/api/admin/config', controller.admin.config);
+  router.get('/api/admin/config', controller.admin.getconfig);
   router.put('/api/admin/config', controller.admin.configupdate);
 
   router.get('/api/admin/componentlist', controller.admin.componentlist);
